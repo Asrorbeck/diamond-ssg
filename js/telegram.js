@@ -17,8 +17,8 @@ function sendTelegram() {
     return false;
   }
 
-  var botToken = "7402397772:AAEO_RJOBySfSeRArInjU16Eluc9m6KyB2o";
-  var chatIds = ["-1002156911481"]; // Correct group chat ID
+  var botToken = process.env.TELEGRAM_BOT_TOKEN;
+  var chatIds = ["5770018"]; // Correct group chat ID
 
   // Construct the message
   var message = `Full Name: ${fullName}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nDriver Type: ${driverType}\nExperience: ${experience}\nTerms Accepted: ${
