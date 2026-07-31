@@ -17,8 +17,8 @@ function sendTelegram() {
     return false;
   }
 
-  var botToken = process.env.TELEGRAM_BOT_TOKEN;
-  var chatIds = ["5770018"]; // Correct group chat ID
+  var botToken = "7402397772:AAEO_RJOBySfSeRArInjU16Eluc9m6KyB2o";
+  var chatIds = ["-1002156911481"]; // Group chat ID
 
   // Construct the message
   var message = `Full Name: ${fullName}\nEmail: ${email}\nPhone Number: ${phoneNumber}\nDriver Type: ${driverType}\nExperience: ${experience}\nTerms Accepted: ${
@@ -84,6 +84,14 @@ function showFileName() {
   var input = document.querySelector('input[name="cdl"]');
   var fileName = input.files[0] ? input.files[0].name : "No file selected";
   document.getElementById("file-name").textContent = fileName;
+}
+
+function toggleSubmitBtn() {
+  var checkbox = document.getElementById("sms-consent");
+  var submitBtn = document.getElementById("apply-submit-btn");
+  if (submitBtn) {
+    submitBtn.disabled = !checkbox.checked;
+  }
 }
 
 // Function to send form data to Telegram
