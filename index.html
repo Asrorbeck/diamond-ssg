@@ -235,7 +235,7 @@
             All your carrier needs, in one place, let’s deliver yours next!
           </p>
 
-          <form class="contact__form" method="POST" action="https://formsubmit.co/diamond_inc@yahoo.com">
+          <form class="contact__form" method="POST" action="https://formsubmit.co/Diamond_inc@yahoo.com">
             <input type="hidden" name="_subject" value="Diamond Inc - For Partners (Contact)" />
             <input type="hidden" name="_captcha" value="false" />
             <div class="contact__wrapper">
@@ -258,7 +258,7 @@
               <input class="contact__input" type="text" name="message" id="message" required placeholder="Message" />
             </div>
 
-            <button class="contact__submit" type="submit">Submit</button>
+            <button class="contact__submit" type="submit" id="contact-submit-btn"><span class="btn-text">Submit</span></button>
           </form>
         </div>
       </div>
@@ -269,10 +269,11 @@
         <div class="apply__container" data-aos="fade-up" data-aos-duration="2000">
           <div class="apply__wrapper">
             <h2 class="apply__header">Apply</h2>
-            <form class="apply__form" method="POST" action="https://formsubmit.co/diamond_inc@yahoo.com"
-              enctype="multipart/form-data">
+            <form class="apply__form" method="POST" action="https://formsubmit.co/Diamond_inc@yahoo.com"
+              enctype="multipart/form-data" target="apply-frame">
               <input type="hidden" name="_subject" value="Diamond Inc - Apply (Driver Application)" />
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="about:blank" />
               <div class="apply__main-wrapper">
                 <div class="apply__input-wrapper">
                   <input type="text" name="FirstName" id="FirstName" placeholder="Full name" required
@@ -347,8 +348,10 @@
                   </span>
                 </label>
               </div>
-              <button type="submit" class="apply__btn" id="apply-submit-btn" disabled>Send it now</button>
+              <button type="submit" class="apply__btn" id="apply-submit-btn" disabled><span class="btn-text">Send it now</span></button>
             </form>
+            <!-- Hidden iframe: receives FormSubmit response so page never navigates away -->
+            <iframe name="apply-frame" style="display:none;" title="apply-result"></iframe>
           </div>
         </div>
       </div>
