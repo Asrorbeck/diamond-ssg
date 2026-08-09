@@ -337,18 +337,17 @@
 
               <div class="apply__sms-consent">
                 <label class="apply__sms-label">
-                  <input type="checkbox" id="sms-consent" name="sms_consent" class="apply__sms-checkbox"
-                    onchange="toggleSubmitBtn()" />
+                  <input type="checkbox" id="sms-consent" name="sms_consent" class="apply__sms-checkbox" />
                   <span class="apply__sms-text">
-                    By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from
-                    Diamond Inc. This includes SMS messages for conversations (external) and conversations (between
-                    employees). Message frequency varies. Message and data rates may apply. See our
-                    <a href="./privacy.html">Privacy Policy</a>.
-                    Message HELP for help. Reply STOP to any message to opt out.
+                    By checking this box, I consent to receive text messages related to conversations (external) and
+                    conversations (between employees) from Diamond Inc. You can reply &ldquo;STOP&rdquo; at any time to
+                    opt-out. Message and data rates may apply. Message frequency may vary; text HELP to
+                    +1 (513) 592-3800 for assistance. For more information, please refer to our
+                    <a href="./privacy.html">privacy policy and SMS Terms and Conditions</a> on our website.
                   </span>
                 </label>
               </div>
-              <button type="submit" class="apply__btn" id="apply-submit-btn" disabled><span class="btn-text">Send it now</span></button>
+              <button type="submit" class="apply__btn" id="apply-submit-btn"><span class="btn-text">Send it now</span></button>
             </form>
             <!-- Hidden iframe: receives FormSubmit response so page never navigates away -->
             <iframe name="apply-frame" style="display:none;" title="apply-result"></iframe>
